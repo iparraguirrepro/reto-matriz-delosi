@@ -1,6 +1,8 @@
 
 # 🚀 Reto Técnico Delosi
 
+[![Ver en Linea](https://img.shields.io/badge/Ver%20Proyecto-Publicado-purple?style=for-the-badge)](https://delosi-iparraguirre.vercel.app/challenge)
+
 Este proyecto corresponde al reto técnico solicitado por **Delosi**, desarrollado con **NextJS** y preparado para ejecutarse en un entorno **Docker** mediante `docker compose`.
 
 ## 📦 Requisitos previos
