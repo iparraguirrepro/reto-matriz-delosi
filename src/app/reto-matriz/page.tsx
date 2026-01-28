@@ -1,4 +1,5 @@
 import BlockMatrizComponent from "@/components/block-matriz"
+import { seoDescription as coreSeo } from "@/lib/constants"
 import { Metadata } from "next"
 
 const seoDescription = {
@@ -12,14 +13,7 @@ export const metadata: Metadata = {
     title: seoDescription.title,
     description: seoDescription.description,
     siteName: seoDescription.title,
-    images: [
-      {
-        url: 'https://reto-delosi/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Open Graph',
-      },
-    ],
+    images: coreSeo.ogImages,
     locale: 'es_PE',
     type: 'website',
   },
