@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function MatrizPage() {
+export default async function ChallengePage() {
 
   return (
     <div className="px-5">

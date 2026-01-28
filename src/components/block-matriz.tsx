@@ -97,7 +97,7 @@ export default function BlockMatrizComponent() {
             </div>
 
             <p className="flex flex-col text-black text-xs py-2">
-              Resultado anti-horario (90 grados): <span className="font-semibold break-words">{JSON.stringify(oMatriz)}</span>
+              Resultado anti-horario (90 grados): <span data-testid="rotate-result" className="font-semibold break-words">{JSON.stringify(oMatriz)}</span>
             </p>
           </>
         ) : ''
