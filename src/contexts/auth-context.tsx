@@ -1,33 +1,19 @@
 "use client"
 
-import { createContext, useContext, useEffect, useState, type ReactNode } from "react"
-import type { User } from "firebase/auth"
+import { createContext, useContext } from "react"
+
+import { AUTH_MESSAGES } from "@/lib/messages"
+import { Auth } from "@/types/Auth"
 
 interface AuthContextType {
-  user: User | null
-  isLoading: boolean
-  // login: (email: string, password: string) => Promise<void>
-  // register: (email: string, password: string, name: string) => Promise<void>
-  // logout: () => Promise<void>
 }
 
+// Contexto para agregar las evaluaciónes de autenticidad
 const AuthContext = createContext<AuthContextType | undefined>(undefined)
 
-export function AuthProvider({ children }: { children: ReactNode }) {
-  const [user, setUser] = useState<User | null>(null)
-  const [isLoading, setIsLoading] = useState(true)
-
-  // useEffect(() => {
-  //   const unsubscribe = onAuthStateChange((currentUser) => {
-  //     setUser(currentUser)
-  //     setIsLoading(false)
-  //   })
-
-  //   return () => unsubscribe()
-  // }, [])
-
+export function AuthProvider({ children }: Auth) {
   return (
-    <AuthContext.Provider value={{ user, isLoading }}>
+    <AuthContext.Provider value={{}}>
       {children}
     </AuthContext.Provider>
   )
@@ -35,9 +21,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
 export function useAuth() {
   const context = useContext(AuthContext)
-  if (context === undefined) {
-    throw new Error("useAuth must be used within an AuthProvider")
-  }
+  if (context === undefined) throw new Error(AUTH_MESSAGES.authProvider)
   return context
 }
 

@@ -27,7 +27,7 @@ export default function HeaderComponent() {
             </Link>
             <Link
               className="text-[#002864] text-[15px] underline-offset-8 leading-4 hover:underline"
-              href="/reto-matriz"
+              href="/challenge"
               title="Delosi - Reto Matriz"
             >
               Reto Matriz

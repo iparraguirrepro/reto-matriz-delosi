@@ -1,18 +1,22 @@
 "use client"
 
+import { Matriz } from "@/types/Matriz"
+
 type BlockProps = {
-  readonly matriz: number[][]
+  readonly matriz: Matriz
 }
 
 export default function BlockMatrizResultComponent({ matriz }: BlockProps) {
   return (
-    <div className="flex flex-col relative top-4 pb-5 overflow-x-scroll w-full justify-center items-center">
+    <div className="flex flex-col h-full relative pb-5 w-full justify-center items-center">
       {
         matriz.map((item, index) => (
           <div className="flex" key={index}>
             {
               item.map((item, _index) => (
-                <p className="text-black text-xs border border-black p-1 select-none cursor-default" key={_index}>{item}</p>
+                <div className={
+                  `text-black text-xs border w-[25px] text-center border-black p-1 select-none cursor-default ${!isNaN(Number(item)) && 'bg-blue-300'}`
+                } key={_index}>{item}</div>
               ))
             }
           </div>

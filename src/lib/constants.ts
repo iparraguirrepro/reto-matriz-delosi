@@ -1,3 +1,5 @@
+
+// Definimos las constantes usadas para las OgMeta
 export const seoDescription = {
   title: "Frontend Delosi | IPARRAGUIRRE",
   description:

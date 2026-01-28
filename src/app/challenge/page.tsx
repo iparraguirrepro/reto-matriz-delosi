@@ -26,7 +26,8 @@ export default async function MatrizPage() {
       <div className="min-h-[300px] w-full">
         <h1 className="font-semibold py-2">Descripción</h1>
         <p className="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit deserunt deleniti porro quibusdam perferendis officia eaque voluptates perspiciatis minima quae consequatur neque, sed, necessitatibus qui laborum molestiae esse, inventore non.</p>
-
+        <hr className="py-1 mt-3" />
+        <a className="text-sm underline font-semibold mt-3 hover:text-blue-500" target="_blank" href="./prueba-tecnica-delosi.pdf">Ver Requerimiento</a>
         <BlockMatrizComponent />
       </div>
     </div>
